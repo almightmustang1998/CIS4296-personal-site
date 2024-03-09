@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -23,21 +25,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.3/dist/iconify-icon.min.js"></script>
-
-    <!-- Remove this and fill in your name & photo in the required areas -->
-    <script>
-      fetch('https://randomuser.me/api/?inc=name,picture')
-        .then((response) => response.json())
-        .then(({ results }) => results[0])
-        .then(({ name, picture }) => {
-          document.querySelector('#name').innerText = name.first
-          document.querySelector(
-            '.navbar-brand'
-          ).innerText = `${name.first} ${name.last}`
-          document.title = `${name.first} ${name.last} Personal Site`
-          document.querySelector('#profilepic').src = picture.large
-        })
-    </script>
 
     <link href="styles/theme.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
@@ -99,13 +86,14 @@
           class="rounded-circle"
           draggable="false"
           id="profilepic"
+          img src="./images/profilepicture.jpg"
         />
       </div>
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">
           <!-- Set Name Here -->
-          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm
-          <span id="name"></span>!
+          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> 
+          I'm Carlos Chavez!
         </h4>
       </div>
       <div class="row mx-auto">
@@ -116,51 +104,10 @@
       <div class="row my-4 language-wrapper row-gap-5 col-gap-1 gap-lg-2">
         <div class="col text-center">
           <img
-            src="images/python.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Python"
-          />
-        </div>
-        <div class="col text-center">
-          <img
-            src="images/angular.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Angular"
-          />
-        </div>
-        <div class="col text-center">
-          <img
-            src="images/typescript.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="TypeScript"
-          />
-        </div>
-
-        <div class="col text-center">
-          <img
             src="images/csharp.jpg"
             data-bs-toggle="tooltip"
             data-placement="top"
             title="C#"
-          />
-        </div>
-        <div class="col text-center">
-          <img
-            src="images/node.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Node.js"
-          />
-        </div>
-        <div class="col text-center">
-          <img
-            src="images/java.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Java"
           />
         </div>
 
@@ -172,6 +119,16 @@
             title="ASP.NET"
           />
         </div>
+
+        <div class="col text-center">
+          <img
+            src="images/java.jpg"
+            data-bs-toggle="tooltip"
+            data-placement="top"
+            title="Java"
+          />
+        </div>
+
         <div class="col text-center">
           <img
             src="images/mssql.jpg"
@@ -180,14 +137,36 @@
             title="Microsoft SQL Server"
           />
         </div>
+
         <div class="col text-center">
           <img
-            src="images/mongodb.jpg"
+            src="images/React.png"
             data-bs-toggle="tooltip"
             data-placement="top"
-            title="MongoDB"
+            title="React"
           />
         </div>
+
+        <div class="col text-center">
+          <img
+            src="images/python.jpg"
+            data-bs-toggle="tooltip"
+            data-placement="top"
+            title="Python"
+          />
+        </div>
+      
+
+        <div class="col text-center">
+          <img
+            src="images/node.jpg"
+            data-bs-toggle="tooltip"
+            data-placement="top"
+            title="Node.js"
+          />
+        </div>
+        
+        
       </div>
 
       <div class="row mt-3 mt-lg-5 next">
@@ -212,47 +191,37 @@
         </h5>
       </div>
       <div class="row w-100">
-        <h5>Inspiro for Esperanza</h5>
+        <h5> <a href="https://cis-iis2.temple.edu/Spring2024/CIS3342_TUG41350/Project2/HomeBuilder.aspx"
+          class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Home Builder Site</a></h5>
+      </div>
+      <div class="row w-100">
+        <p class="text-justify">
+        	This project is a web application that conforms to the multiple-tier software architecture, which works with dynamic data displays 
+          and a database to allow a customer to build their dream home. There are user-friendly features such as input validation and data binding, facilitating seamless interaction.
+           The project relies on object oriented programming for modular and scalable design. Enabled server-side processing for updating sales information and calculating costs. 
+           Designed a professional UI using CSS tools like Bootstrap, ensuring a polished appearance.
+        </p>
+      </div>
+      <div class="row w-100">
+        <h5>Network Spell Checker</h5>
       </div>
       <div class="row w-100 mb-4">
         <p class="text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus
-          nisi in neque blandit auctor. Vestibulum pellentesque fringilla nulla
-          quis sagittis. Donec id erat sodales, fringilla est non, vestibulum
-          tellus. Suspendisse potenti. Fusce et dolor blandit, tincidunt eros
-          non, pharetra orci. Donec massa neque, suscipit at purus ac, cursus
-          tincidunt purus. Suspendisse imperdiet massa nec sem dictum luctus.
-          Vestibulum at porta lectus, sed faucibus libero.
+        The Network Spell Checker uses multithreading programming techniques and network sockets to communicate between a server thread
+         and client threads to see if a word exists in its dictionary while logging all interactions. This project was built using low-level C.
         </p>
       </div>
       <div class="row w-100">
-        <h5>Work From Home Pinterest</h5>
+        <h5>Car Rental Application</h5>
       </div>
       <div class="row w-100 mb-4">
         <p class="text-justify">
-          Vestibulum vulputate ullamcorper placerat. Fusce bibendum ligula non
-          ex dapibus finibus. Nulla facilisi. Integer eu libero lorem.
-          Pellentesque eget pretium ligula. Donec finibus nibh sed leo dapibus
-          imperdiet. Fusce cursus eu mi sed porttitor. Aliquam eget suscipit
-          dolor, ac mollis risus. Vestibulum commodo turpis nulla, bibendum
-          varius urna dictum porta.
+        Using the MVC Design Pattern, C#, and Microsoft Access this CRUD application allows employees of a Car Rental business to perform their daily functions
+        such as adding cars to their inventory, modifying details about cars, deleting cars from their inventory, etc.
+        The application also allows customers to view, search, and rent cars through a Windows Form application.
         </p>
       </div>
-      <div class="row w-100">
-        <h5>Query Dating Site</h5>
-      </div>
-      <div class="row w-100">
-        <p class="text-justify">
-          Fusce egestas lectus ac est porttitor congue. Mauris lacinia pharetra
-          odio ut egestas. Nullam facilisis condimentum consequat. Integer arcu
-          nibh, ullamcorper non fringilla quis, tempus sit amet turpis. Proin ac
-          gravida mi. Ut eros quam, pharetra venenatis pharetra at, porttitor
-          sit amet dolor. Ut et accumsan metus. Phasellus eros diam, tristique a
-          maximus vel, fringilla eu nisl. Pellentesque sed quam non urna dapibus
-          porta in in nibh. Phasellus lobortis nibh est, id pretium orci
-          efficitur at.
-        </p>
-      </div>
+      
       <div class="row mt-3 next">
         <a href="#courses" class="col"
           ><iconify-icon
@@ -324,7 +293,7 @@
           <h5 class="m-0">Database Management Systems</h5>
         </a>
         <div class="row mt-5 next justify-content-center align-items-center">
-          <a href="#contact" class="text-center"
+          <a href="#resume" class="text-center"
             ><iconify-icon
               icon="material-symbols:arrow-circle-down"
               class="arrow-next"
@@ -333,6 +302,23 @@
         </div>
       </div>
     </div>
+
+    <div
+      class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
+      id="resume"
+    >
+      <div class="row mx-auto">
+        <h4 class="h1 font-weight-bold mx-auto text-center">Resume</h4>
+      </div>
+      <div class="row mx-auto">
+        <div class="embed-responsive">
+          <iframe class="embed-responsive-item" src="./images/Resume2024.pdf" style="width: 800px; height: 800px;"></iframe>
+        </div>
+      </div>
+     </div>
+     </div>
+
+
     <div
       class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
       id="contact"
@@ -348,7 +334,7 @@
         </h5>
       </div>
       <div class="row my-4 contact-wrapper gap-3">
-        <a href="mailto:johndoe@gmail.com" class="col text-black">
+        <a href="mailto:carlos.chavez@temple.edu" class="col text-black">
           <iconify-icon
             icon="logos:google-gmail"
             width="60"
@@ -358,7 +344,7 @@
             title="Email"
           ></iconify-icon>
         </a>
-        <a href="https://www.linkedin.com/in/johndoe/" class="col"
+        <a href="https://www.linkedin.com/in/carloschavez98/" class="col"
           ><iconify-icon
             icon="skill-icons:linkedin"
             width="60"
@@ -368,7 +354,7 @@
             title="LinkedIn"
           ></iconify-icon>
         </a>
-        <a href="https://github.com/johndoe" class="col"
+        <a href="https://github.com/almightmustang1998" class="col"
           ><iconify-icon
             icon="skill-icons:github-dark"
             width="60"
